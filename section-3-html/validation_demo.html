@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>validation demo</title>
+  </head>
+  <body>
+    <main>
+      <h1>form validation</h1>
+      <form action="/dummy">
+        <label for="first_name">enter first name</label>
+        <input type="text" id="first_name" name="first_name" required />
+        <p>
+          <label for="username">username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            minlength="5"
+            maxlength="20"
+          />
+        </p>
+        <button>submit</button>
+      </form>
+    </main>
+  </body>
+</html>
