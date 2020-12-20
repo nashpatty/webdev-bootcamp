@@ -25,6 +25,7 @@
       </form>
       <h2>more inputs</h2>
       <form action="/dogs">
+        <input type="number" min="1" max="10" />
         <input type="checkbox" name="agree_tos" id="agree" />
         <label for="agree">I agree</label>
         <p>
@@ -45,7 +46,24 @@
         </p>
         <p>
           <label for="cheese">amount of cheese:</label>
-          <input type="range" id="cheese" min="1" max="10" name="cheese" />
+          <input
+            type="range"
+            id="cheese"
+            min="1"
+            max="10"
+            value="2"
+            name="cheese"
+          />
+        </p>
+        <p>
+          <label for="special_requests">special request?</label>
+          <textarea
+            name="special_requests"
+            id="special_requests"
+            cols="30"
+            rows="3"
+            placeholder="special requests"
+          ></textarea>
         </p>
         <button>submit</button>
       </form>
