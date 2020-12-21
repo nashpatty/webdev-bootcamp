@@ -10,27 +10,41 @@
         <h1>race registration</h1>
         <div>
           <label for="first_name">first name</label>
-          <input type="text" name="first_name" id="first_name" />
+          <input type="text" name="first_name" id="first_name" required />
           <label for="last_name">last name</label>
-          <input type="text" name="last_name" id="last_name" />
+          <input type="text" name="last_name" id="last_name" required />
         </div>
         <div>
-          <label for="race_type">select a race:</label>
-          <br />
-          <input type="radio" name="fun_run_5k" id="fun_run_5k" />
+          <p>select a race:</p>
+          <input
+            type="radio"
+            name="race_type"
+            id="fun_run_5k"
+            value="fun_run"
+          />
           <label for="fun_run_5k">fun run 5k</label>
           <br />
-          <input type="radio" name="half_marathon" id="half_marathon" />
+          <input
+            type="radio"
+            name="race_type"
+            id="half_marathon"
+            value="half_marathon"
+          />
           <label for="half_marathon">half marathon</label>
           <br />
-          <input type="radio" name="full_marathon" id="full_marathon" />
+          <input
+            type="radio"
+            name="race_type"
+            id="full_marathon"
+            value="full_marathon"
+          />
           <label for="full_marathon">full marathon</label>
         </div>
         <div>
           <label for="email">email</label>
-          <input type="email" name="email" id="email" />
+          <input type="email" name="email" id="email" required />
           <label for="password">password</label>
-          <input type="password" name="password" id="password" />
+          <input type="password" name="password" id="password" required />
         </div>
         <div>
           <label for="age_group">select age group</label>
