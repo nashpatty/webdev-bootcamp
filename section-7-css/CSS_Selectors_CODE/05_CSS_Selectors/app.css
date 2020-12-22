@@ -3,9 +3,14 @@ h2 {
   color: #293241;
 }
 
-button {
+.post button {
   color: #293241;
   background-color: #ee6c4d;
+}
+
+#login {
+  color: #98c1d9;
+  background-color: #293241;
 }
 
 #signup {
