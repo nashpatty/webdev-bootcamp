@@ -4,7 +4,7 @@ h2 {
 }
 
 button {
-  color: #e0fbfc;
+  color: #293241;
   background-color: #ee6c4d;
 }
 
@@ -29,4 +29,26 @@ span {
 
 footer a {
   color: #293241;
+}
+
+.post button:hover {
+  background-color: #293241;
+  color: #e0fbfc;
+}
+
+.post button:active {
+  background-color: #98c1d9;
+}
+
+.post:nth-of-type(2n) {
+  background-color: #e0fbfc;
+}
+
+h2::first-letter {
+  color: #ee6c4d;
+}
+
+p::selection {
+  background-color: #ee6c4d;
+  color: #3d5a80;
 }
