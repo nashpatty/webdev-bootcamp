@@ -1,0 +1,31 @@
+div {
+  width: 200px;
+  background-color: #faf3dd;
+}
+
+h1 {
+  width: 200px;
+  background-color: #ffa69e;
+}
+
+#one {
+  background-color: #aed9e0;
+  border-width: 2px;
+  border-color: #000;
+  border-style: solid;
+  box-sizing: border-box;
+}
+
+#two {
+  background-color: #b8f2e6;
+  border: 2px dashed #000;
+  box-sizing: border-box;
+}
+
+#three {
+  background-color: #faf3dd;
+  border-width: 2px;
+  border-color: #000;
+  border-style: dotted;
+  box-sizing: border-box;
+}
