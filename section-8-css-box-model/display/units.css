@@ -1,0 +1,27 @@
+section {
+  background-color: #f4f1de;
+  width: 500px;
+  height: 250px;
+}
+
+div {
+  background-color: #e07a5f;
+  height: 50%;
+  width: 50%;
+}
+
+article {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 3em;
+  margin-left: 1em;
+}
+
+button {
+  font-size: 2em;
+  color: #f4f1de;
+  background-color: #3d405b;
+  border-radius: 0.5em;
+}
