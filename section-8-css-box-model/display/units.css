@@ -25,3 +25,7 @@ button {
   background-color: #3d405b;
   border-radius: 0.5em;
 }
+
+ul {
+  font-size: 2em;
+}
