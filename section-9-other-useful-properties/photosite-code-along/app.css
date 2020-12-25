@@ -1,0 +1,21 @@
+img {
+  width: 30%;
+  /* had to use 6.5 instead of 6 for equal spacing... */
+  /* fixed due to the whitespace issue with images being on different lines */
+  margin: calc(10% / 6);
+}
+
+img:hover {
+  transform: translateY(-1%);
+  transition: 0.5s;
+}
+
+nav {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f1f1f1;
+  width: 30%;
+  margin-left: calc(10% / 6.5);
+  padding: 1em 0;
+}
