@@ -8,5 +8,8 @@
 *.tar
 *.zip
 
+#ignore checking in .sh
+*.sh
+
 # ignore dir
 __MACOSX/
