@@ -1,0 +1,32 @@
+div {
+  width: 100px;
+  height: 100px;
+  background-color: #3d405b;
+  border: 2px solid #000;
+  margin: 5px;
+  display: inline-block;
+}
+
+#middle {
+  background-color: #81b29a;
+}
+
+#relative #middle {
+  position: relative;
+  top: 50px;
+}
+
+#absolute {
+  position: relative;
+}
+
+#absolute #middle {
+  position: absolute;
+  left: 75px;
+}
+
+#fixed #middle {
+  position: fixed;
+  top: 0px;
+  left: 500px;
+}
