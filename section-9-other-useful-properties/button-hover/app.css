@@ -1,0 +1,25 @@
+body {
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #151b29;
+}
+
+button {
+  font-family: monospace;
+  background: none;
+  color: paleturquoise;
+  border: 2px solid palevioletred;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  transition: 0.25s;
+}
+
+button:hover {
+  border-color: paleturquoise;
+  color: white;
+  box-shadow: 0 0.5em 0.5em -0.5em paleturquoise;
+  transform: translateY(-0.25em);
+}
