@@ -134,8 +134,17 @@ table {
   border-spacing: 0;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto Mono', monospace;
+  background-color: #60a9ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 h1,
@@ -144,4 +153,12 @@ h3,
 h4 {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
+}
+
+.panel {
+  background-color: white;
+  display: flex;
+  border-radius: 1em;
+  padding: 1em 1.5em;
+  max-width: 960px;
 }
