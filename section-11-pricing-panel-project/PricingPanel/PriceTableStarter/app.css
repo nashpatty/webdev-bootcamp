@@ -209,3 +209,40 @@ h4 {
   font-weight: 600;
   display: block;
 }
+
+.pricing-button {
+  border: 1px solid #e1f1ff;
+  border-radius: 0.5em;
+  color: #348efe;
+  display: inline-block;
+  padding: 1em 1.25em;
+  text-decoration: none;
+  margin: 1em 0;
+  transition: all 200ms ease-in-out;
+}
+
+.pricing-button:hover,
+.pricing-button:focus {
+  background-color: #e1f1ff;
+}
+
+.pricing-button.is-featured {
+  background-color: #48aaff;
+  color: white;
+}
+
+@media (min-width: 900px) {
+  .panel {
+    flex-direction: row;
+  }
+
+  .pricing-plan {
+    border-bottom: none;
+    border-right: 1px solid #e1f1ff;
+    padding: 1em 1.5em;
+  }
+
+  .pricing-plan:last-child {
+    border-right: none;
+  }
+}
