@@ -21,9 +21,9 @@ while (count < 10) {
 }
 
 const some_data = {
-  first_name = "first name",
-  last_name = "last name",
-  age = 25,
-  ssn = 1234
-}
+  first_name: 'first name',
+  last_name: 'last name',
+  age: 25,
+  ssn: 1234,
+};
 // iterating over objects
