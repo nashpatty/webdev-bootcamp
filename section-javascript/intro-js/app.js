@@ -19,3 +19,11 @@ while (count < 10) {
   count++;
   console.log(count);
 }
+
+const some_data = {
+  first_name = "first name",
+  last_name = "last name",
+  age = 25,
+  ssn = 1234
+}
+// iterating over objects
