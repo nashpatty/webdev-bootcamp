@@ -26,4 +26,5 @@ const some_data = {
   age: 25,
   ssn: 1234,
 };
+
 // iterating over objects
