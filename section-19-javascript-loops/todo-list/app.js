@@ -1,8 +1,15 @@
+/**
+ * the comments in this file are suggestions based on the solution
+ */
+
+// the todo_list array should be a const
 let todo_list = [];
 let quit_app = false;
 let todo_item = '';
 let index = 0;
 
+// could just check the input here instead of setting a bool
+// e.g. selection !== 'quit'
 while (!quit_app) {
   let selection = prompt('what would you like todo?');
 
@@ -15,6 +22,8 @@ while (!quit_app) {
       break;
     case 'list':
       console.log('todo items:');
+      // since the index is being used, consider a classic for loop
+      // rather than a for .. of loop
       index = 0;
       for (let todo of todo_list) {
         index++;
@@ -24,6 +33,8 @@ while (!quit_app) {
     case 'delete':
       console.log('deleting an item...');
       console.log('select from the items below:');
+      // since the index is being used, consider a classic for loop
+      // rather than a for .. of loop
       index = 0;
       for (let todo of todo_list) {
         index++;
