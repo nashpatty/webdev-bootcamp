@@ -24,6 +24,9 @@ function makeMysteryFunc() {
   };
 }
 
+// creates a function with min and max
+// e.g. const isChild = makeBetweenFunc(0, 18)
+//      isChild(14) = true
 function makeBetweenFunc(min, max) {
   return function (num) {
     return num >= min && num <= max;
