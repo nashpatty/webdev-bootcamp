@@ -55,3 +55,8 @@ setTimeout(() => {
 // filter
 const evenNumbers = numbers.filter((num) => num % 2 === 0);
 console.log(`filter even numbers: ${evenNumbers}`);
+
+// ********************************************
+// every / some
+console.log('every: ' + numbers.every((num) => num > 10));
+console.log('some: ' + numbers.some((num) => num === 5));
