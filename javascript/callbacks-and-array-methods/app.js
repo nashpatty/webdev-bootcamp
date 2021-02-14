@@ -36,3 +36,11 @@ console.log(movieTitles);
 
 // ********************************************
 // arrow functions
+const add = (x, y) => {
+  return x + y;
+};
+console.log(`arrow function: ${add(2, 1)}`);
+
+// implicit return
+const multiply = (x, y) => x * y;
+console.log(`implicit return: ${multiply(2, 2)}`);
