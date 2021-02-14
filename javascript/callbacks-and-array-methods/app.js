@@ -44,3 +44,9 @@ console.log(`arrow function: ${add(2, 1)}`);
 // implicit return
 const multiply = (x, y) => x * y;
 console.log(`implicit return: ${multiply(2, 2)}`);
+
+// ********************************************
+// setTimeout
+setTimeout(() => {
+  console.log('2 seconds later...');
+}, 2000);
