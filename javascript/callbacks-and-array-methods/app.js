@@ -48,5 +48,10 @@ console.log(`implicit return: ${multiply(2, 2)}`);
 // ********************************************
 // setTimeout
 setTimeout(() => {
-  console.log('2 seconds later...');
+  console.log('setTimeout 2 seconds later...');
 }, 2000);
+
+// ********************************************
+// filter
+const evenNumbers = numbers.filter((num) => num % 2 === 0);
+console.log(`filter even numbers: ${evenNumbers}`);
