@@ -60,3 +60,19 @@ console.log(`filter even numbers: ${evenNumbers}`);
 // every / some
 console.log('every: ' + numbers.every((num) => num > 10));
 console.log('some: ' + numbers.some((num) => num === 5));
+
+// ********************************************
+// reduce
+const prices = [1.99, 2.99, 34.99, 32.99];
+const total = prices.reduce((total, price) => {
+  return total + price;
+});
+console.log(`total price: ${total.toFixed(2)}`);
+
+const lowestPrice = prices.reduce((min, price) => {
+  if (price < min) {
+    return price;
+  }
+  return min;
+});
+console.log(`lowest price: ${lowestPrice}`);
