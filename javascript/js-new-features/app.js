@@ -57,3 +57,12 @@ function withRest(...args) {
 
 noRest(1, 2, 3, 5); // prints first arg
 withRest(1, 2, 3, 5); // prints all args
+
+/**
+ * ********************************************
+ * destructuring
+ */
+const scores = [10, 9.2, 9.1, 8.5, 7];
+const [gold, silver] = scores;
+console.log('LOG >> file: app.js >> line 67 >> silver', silver); // 9.2
+console.log('LOG >> file: app.js >> line 67 >> gold', gold); // 10
