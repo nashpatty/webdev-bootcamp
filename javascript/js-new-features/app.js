@@ -23,7 +23,7 @@ console.log(
 // this will find the right max, with the spread syntax
 // passes each element in the array as a separate arguments
 console.log(
-  '🚀 ~ file: app.js ~ line 16 ~ Math.max(...numbers):',
+  '🔧 ¦ file: app.js ¦ line 16 ¦ Math.max(...numbers):',
   Math.max(Math.max(...numbers))
 );
 
