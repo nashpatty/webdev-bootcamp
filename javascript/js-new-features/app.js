@@ -62,7 +62,22 @@ withRest(1, 2, 3, 5); // prints all args
  * ********************************************
  * destructuring
  */
+// destructuring arrays
 const scores = [10, 9.2, 9.1, 8.5, 7];
 const [gold, silver] = scores;
 console.log('LOG >> file: app.js >> line 67 >> silver', silver); // 9.2
 console.log('LOG >> file: app.js >> line 67 >> gold', gold); // 10
+
+// destructuring objects
+const user = {
+  email: 'nash@gmail.com',
+  password: '3n838fhn#',
+  firstName: 'nash',
+  lastName: 'patty',
+};
+
+// property has to exist in an object
+const { email } = user;
+console.log('LOG >> email', email); // nash@gmail.com
+const { age } = user;
+console.log('LOG >> age', age); // undefined
