@@ -24,7 +24,7 @@ console.log(
 // passes each element in the array as a separate arguments
 console.log(
   'LOG ~ file: app.js ~ line 16 ~ Math.max(...numbers):',
-  Math.max(Math.max(...numbers))
+  Math.max(...numbers)
 );
 
 // combining using spread
