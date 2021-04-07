@@ -81,3 +81,14 @@ const { email } = user;
 console.log('LOG >> email', email); // nash@gmail.com
 const { age } = user;
 console.log('LOG >> age', age); // undefined
+
+const { email: userEmail } = user; // renaming variables
+console.log('⚙️ » userEmail', userEmail);
+
+// destructuring parameters
+// if not all the parameters from an object are required
+function fullName({ firstName, lastName }) {
+  return `${firstName} ${lastName}`;
+}
+
+console.log('fullName destructured', fullName(user));
