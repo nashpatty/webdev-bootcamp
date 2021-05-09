@@ -21,3 +21,10 @@ function makeBetweenFunc(min, max) {
 
 const isChild = makeBetweenFunc(0, 18);
 console.log(isChild(7));
+
+// try catch
+try {
+  hello.upperCase();
+} catch {
+  console.log('error');
+}
