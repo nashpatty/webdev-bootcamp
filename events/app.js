@@ -20,6 +20,7 @@ function yell() {
   console.log('yell');
 }
 
+// addEventListener vs onclick
 const rblYell = document.querySelector('#rbl-yell');
 // only prints yell
 rblYell.onclick = rebel;
