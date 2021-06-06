@@ -34,7 +34,24 @@ rblYell.addEventListener('click', yell);
  * color changer
  */
 function randomRgbValue() {
-  return Math.floor(Math.random() * (255 - 0) + 0);
+  return Math.floor(Math.random() * 255);
+}
+
+/**
+ *
+ * @returns rgb object, with red, green, blue values and a string represntation.
+ */
+function generateRgb() {
+  let red = randomRgbValue();
+  let green = randomRgbValue();
+  let blue = randomRgbValue();
+  let rgbString = `rgb(${red}, ${green}, ${blue})`;
+  return {
+    red: red,
+    blue: blue,
+    green: green,
+    string: rgbString,
+  };
 }
 
 // use a light font on darker backgrounds
@@ -46,15 +63,27 @@ function useLightFont(r, g, b) {
 const colorChangerBtn = document.querySelector('#change-color-btn');
 const rgbDomText = document.querySelector('#rgb-value');
 colorChangerBtn.addEventListener('click', () => {
-  let red = randomRgbValue();
-  let green = randomRgbValue();
-  let blue = randomRgbValue();
-  let rgbString = `rgb(${red}, ${green}, ${blue})`;
-  document.body.style.backgroundColor = rgbString;
-  rgbDomText.innerText = rgbString;
-  if (useLightFont(red, green, blue)) {
+  let rgb = generateRgb();
+  document.body.style.backgroundColor = rgb.rgbString;
+  rgbDomText.innerText = newColor;
+  if (useLightFont(rgb.red, rgb.green, rgb.blue)) {
     document.body.style.color = 'white';
   } else {
     document.body.style.color = 'black';
   }
 });
+
+// button color changer
+const colorBtns = document.querySelectorAll('#color-btns > button');
+
+for (let btn of colorBtns) {
+  btn.addEventListener('click', () => {
+    let rgb = generateRgb();
+    btn.style.backgroundColor = rgb.rgbString;
+    if (useLightFont(rgb.red, rgb.green, rgb.blue)) {
+      btn.style.color = 'white';
+    } else {
+      btn.style.color = 'black';
+    }
+  });
+}
