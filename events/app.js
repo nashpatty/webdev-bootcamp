@@ -50,7 +50,7 @@ function generateRgb() {
     red: red,
     blue: blue,
     green: green,
-    string: rgbString,
+    rgbString: rgbString,
   };
 }
 
@@ -64,8 +64,8 @@ const colorChangerBtn = document.querySelector('#change-color-btn');
 const rgbDomText = document.querySelector('#rgb-value');
 colorChangerBtn.addEventListener('click', () => {
   let rgb = generateRgb();
+  rgbDomText.innerText = rgb.rgbString;
   document.body.style.backgroundColor = rgb.rgbString;
-  rgbDomText.innerText = newColor;
   if (useLightFont(rgb.red, rgb.green, rgb.blue)) {
     document.body.style.color = 'white';
   } else {
@@ -77,13 +77,17 @@ colorChangerBtn.addEventListener('click', () => {
 const colorBtns = document.querySelectorAll('#color-btns > button');
 
 for (let btn of colorBtns) {
-  btn.addEventListener('click', () => {
-    let rgb = generateRgb();
-    btn.style.backgroundColor = rgb.rgbString;
-    if (useLightFont(rgb.red, rgb.green, rgb.blue)) {
-      btn.style.color = 'white';
-    } else {
-      btn.style.color = 'black';
-    }
-  });
+  // passes the button object into colorize
+  btn.addEventListener('click', colorize);
+}
+
+// using 'this' keyword to make into function
+function colorize() {
+  let rgb = generateRgb();
+  this.style.backgroundColor = rgb.rgbString;
+  if (useLightFont(rgb.red, rgb.green, rgb.blue)) {
+    this.style.color = 'white';
+  } else {
+    this.style.color = 'black';
+  }
 }
