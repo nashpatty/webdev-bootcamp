@@ -140,7 +140,10 @@ body {
   color: #d4be98; */
 }
 
-button,
+button {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
 .mono {
   font-family: 'IBM Plex Mono', monospace;
 }
