@@ -91,3 +91,11 @@ function colorize() {
     this.style.color = 'black';
   }
 }
+
+// keyboard events and event objects
+const input = document.querySelector('input');
+
+input.addEventListener('keydown', (evt) => {
+  console.log(evt.key);
+  console.log(evt.code);
+});
