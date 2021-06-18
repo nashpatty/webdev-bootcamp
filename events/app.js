@@ -99,3 +99,17 @@ input.addEventListener('keydown', (evt) => {
   console.log(evt.key);
   console.log(evt.code);
 });
+
+// form events and prevent default
+// take the item input submission and append to list
+const userListForm = document.querySelector('#user-list');
+
+userListForm.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  let listItem = userListForm.elements.listItem.value;
+
+  const itemList = document.querySelector('#item-list');
+  const newItem = document.createElement('li');
+  newItem.append(`${listItem}`);
+  itemList.append(newItem);
+});
