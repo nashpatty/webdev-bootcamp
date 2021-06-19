@@ -56,12 +56,3 @@ function disableButtons() {
   p1Button.disabled = true;
   p2Button.disabled = true;
 }
-
-// function updatePlayerScore(playerScore, display) {
-//   playerScore++;
-//   if (playerScore < winningScore) {
-//     display.textContent = `${playerScore}`;
-//   } else {
-//     display.textContent = 'player 1 won';
-//   }
-// }
