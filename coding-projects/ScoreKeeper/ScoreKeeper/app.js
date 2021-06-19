@@ -12,7 +12,7 @@ const resetButton = document.querySelector('#reset');
 const playto = document.querySelector('#playto');
 
 playto.addEventListener('change', () => {
-  winningScore = playto.value;
+  winningScore = parseInt(playto.value);
 });
 
 let winningScore = playto.value;
