@@ -13,3 +13,6 @@
 
 # ignore dir
 __MACOSX/
+
+# misc
+*Zone.Identifier
