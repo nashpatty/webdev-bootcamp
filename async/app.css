@@ -136,6 +136,7 @@ table {
 
 body {
   font-family: 'Roboto Mono', monospace;
+  transition: 1s background-color;
 }
 
 h1,
