@@ -34,17 +34,34 @@ const dummyPromise = (url) => {
 
 // promises
 // chained promises
+// dummyPromise('someapi.com/page1')
+//   .then(() => {
+//     console.log('page 1 recieved');
+//     dummyPromise('someapi.com/page2')
+//       .then(() => {
+//         console.log('page 2 recieved');
+//       })
+//       .catch(() => {
+//         console.log('error page 2');
+//       });
+//   })
+//   .catch(() => {
+//     console.log('error page 1');
+//   });
+
+// promises chained together with a single catch for all.
 dummyPromise('someapi.com/page1')
   .then(() => {
-    console.log('page 1 recieved');
-    dummyPromise('someapi.com/page2')
-      .then(() => {
-        console.log('page 2 recieved');
-      })
-      .catch(() => {
-        console.log('error page 2');
-      });
+    console.log('page 1 received');
+    return dummyPromise('someapi.com/pag2');
+  })
+  .then(() => {
+    console.log('page 2 received');
+    return dummyPromise('someapi.com/page3');
+  })
+  .then(() => {
+    console.log('page 3 received');
   })
   .catch(() => {
-    console.log('error page 1');
+    console.log('error fetching page');
   });
