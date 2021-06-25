@@ -1,22 +1,38 @@
-const delayedColorChange = (color, delay, nextColor) => {
-  setTimeout(() => {
-    document.body.style.backgroundColor = color;
-    // cool trick for null checks
-    nextColor && nextColor();
-  }, delay);
-};
+// const delayedColorChange = (color, delay, nextColor) => {
+//   setTimeout(() => {
+//     document.body.style.backgroundColor = color;
+//     // cool trick for null checks
+//     nextColor && nextColor();
+//   }, delay);
+// };
 
 // callbacks
 // wait for the first thing to finish, before second thing happens.
-delayedColorChange('#81b29a', 1000, () => {
-  delayedColorChange('#e07a5f', 1000, () => {
-    delayedColorChange('#f2cc8f', 1000, () => {
-      delayedColorChange('#3d405b', 1000, () => {
-        delayedColorChange('#fdfcdc', 1000, () => {});
-      });
-    });
+// delayedColorChange('#81b29a', 1000, () => {
+//   delayedColorChange('#e07a5f', 1000, () => {
+//     delayedColorChange('#f2cc8f', 1000, () => {
+//       delayedColorChange('#3d405b', 1000, () => {
+//         delayedColorChange('#fdfcdc', 1000, () => {});
+//       });
+//     });
+//   });
+// });
+
+const delayedColorChange = (color, delay) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      document.body.style.backgroundColor = color;
+      resolve();
+    }, delay);
   });
-});
+};
+
+// chaining promises using implicit returns
+delayedColorChange('#81b29a', 1000)
+  .then(() => delayedColorChange('#e07a5f', 1000))
+  .then(() => delayedColorChange('#f2cc8f', 1000))
+  .then(() => delayedColorChange('#3d405b', 1000))
+  .then(() => delayedColorChange('#fdfcdc', 1000));
 
 // defining a promise
 const dummyPromise = (url) => {
@@ -64,4 +80,25 @@ dummyPromise('someapi.com/page1')
   })
   .catch(() => {
     console.log('error fetching page');
+  });
+
+// creating promises
+const delayedPromise = (url) => {
+  return new Promise((resolve, reject) => {
+    const randomNum = Math.random();
+    setTimeout(() => {
+      if (randomNum < 0.5) {
+        resolve();
+      }
+      reject('dogs error');
+    }, 1000);
+  });
+};
+
+delayedPromise('dogs')
+  .then(() => {
+    console.log('dogs resolved');
+  })
+  .catch((err) => {
+    console.log('dogs...', err);
   });
