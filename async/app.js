@@ -28,11 +28,21 @@ const delayedColorChange = (color, delay) => {
 };
 
 // chaining promises using implicit returns
-delayedColorChange('#81b29a', 1000)
-  .then(() => delayedColorChange('#e07a5f', 1000))
-  .then(() => delayedColorChange('#f2cc8f', 1000))
-  .then(() => delayedColorChange('#3d405b', 1000))
-  .then(() => delayedColorChange('#fdfcdc', 1000));
+// delayedColorChange('#81b29a', 1000)
+//   .then(() => delayedColorChange('#e07a5f', 1000))
+//   .then(() => delayedColorChange('#f2cc8f', 1000))
+//   .then(() => delayedColorChange('#3d405b', 1000))
+//   .then(() => delayedColorChange('#fdfcdc', 1000));
+
+async function colorChange() {
+  await delayedColorChange('#e07a5f', 1000);
+  await delayedColorChange('#3d405b', 1000);
+  await delayedColorChange('#fdfcdc', 1000);
+  await delayedColorChange('#f2cc8f', 1000);
+  await delayedColorChange('#81b29a', 1000);
+}
+
+colorChange();
 
 // defining a promise
 const dummyPromise = (url) => {
@@ -101,4 +111,24 @@ delayedPromise('dogs')
   })
   .catch((err) => {
     console.log('dogs...', err);
+  });
+
+const login = async (username, password) => {
+  if (!username || !password) {
+    throw 'missing credentials';
+  }
+
+  if (password === 'password') {
+    return 'secure login ;)';
+  }
+
+  throw 'invalid password';
+};
+
+login('username', 'corgi')
+  .then((msg) => {
+    console.log(msg);
+  })
+  .catch((error) => {
+    console.log(error);
   });
