@@ -119,7 +119,7 @@ const login = async (username, password) => {
     }
 
     if (password === 'password') {
-        return 'secure login ;)';
+        return 'secure login';
     }
 
     throw 'invalid password';
